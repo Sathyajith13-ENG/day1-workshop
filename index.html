@@ -1,99 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>0 to Shipped — Resume Parser</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="nav">
-    <div class="logo">0<span>→</span>Shipped</div>
-    <nav>
-      <a href="#parser">Parser</a>
-      <a href="#how">How it works</a>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <h1>Ship your resume,<br /><span class="accent">scored in seconds.</span></h1>
-      <p class="subtitle">
-        Upload a PDF resume and get an instant score — what skills you have,
-        and what recruiters are still missing.
-      </p>
-      <a href="#parser" class="cta">Parse my resume</a>
-    </section>
-
-    <!-- Parser -->
-    <section class="parser" id="parser">
-      <div class="upload-card" id="upload-card">
-        <div class="upload-icon">📄</div>
-        <h2>Drop your resume here</h2>
-        <p>PDF only · max ~5MB · nothing leaves your browser</p>
-        <button class="cta" id="pick-file">Choose PDF</button>
-        <input type="file" id="file-input" accept="application/pdf" hidden />
-      </div>
-
-      <div class="loader hidden" id="loader">
-        <div class="spinner"></div>
-        <p>Parsing your resume…</p>
-      </div>
-
-      <div class="result hidden" id="result">
-        <div class="score-ring">
-          <svg viewBox="0 0 120 120">
-            <circle class="ring-bg" cx="60" cy="60" r="52" />
-            <circle class="ring-fill" id="ring-fill" cx="60" cy="60" r="52" />
-          </svg>
-          <div class="score-number" id="score-number">0</div>
-        </div>
-
-        <h2 class="result-title" id="verdict">Resume scored</h2>
-
-        <div class="skills">
-          <div class="skill-col">
-            <h3>✅ Skills present</h3>
-            <ul id="present-skills"></ul>
-          </div>
-          <div class="skill-col">
-            <h3>❌ Skills missing</h3>
-            <ul id="missing-skills"></ul>
-          </div>
-        </div>
-
-        <button class="cta ghost" id="reset">Parse another resume</button>
-      </div>
-    </section>
-
-    <!-- How it works -->
-    <section class="how" id="how">
-      <h2>How it works</h2>
-      <div class="steps">
-        <div class="step">
-          <span class="step-num">1</span>
-          <h3>Upload</h3>
-          <p>Drop in your PDF resume. It stays on your machine.</p>
-        </div>
-        <div class="step">
-          <span class="step-num">2</span>
-          <h3>Parse</h3>
-          <p>We scan the text and extract the skills you actually list.</p>
-        </div>
-        <div class="step">
-          <span class="step-num">3</span>
-          <h3>Ship</h3>
-          <p>Get a score and a gap list, then fix what's missing.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>0 to Shipped Resume Parser — a mock build. Scores are simulated.</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0 to Shipped — Resume Parser</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
